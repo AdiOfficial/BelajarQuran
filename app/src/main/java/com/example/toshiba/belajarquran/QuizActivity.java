@@ -4,6 +4,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatImageButton;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.toshiba.belajarquran.Model.AnswerListener;
@@ -49,5 +51,13 @@ public class QuizActivity extends AppCompatActivity implements AnswerListener {
             fragmentTransaction.add(R.id.quiz_fragment_container,fragment)
                     .commit();
         }
+
+        AppCompatImageButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

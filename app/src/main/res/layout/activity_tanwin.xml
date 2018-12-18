@@ -7,26 +7,26 @@
     tools:context=".TanwinActivity">
 
     <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_background_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    android:id="@+id/appCompatImageView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/main_background_image"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/fattahain"
-        android:layout_width="wrap_content"
+        android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:background="@null"
         android:src="@drawable/button_fattahain"
-        app:layout_constraintBottom_toTopOf="@+id/kasrahain"
-        app:layout_constraintEnd_toStartOf="@+id/dammahain"
+        app:layout_constraintBottom_toTopOf="@+id/dammahain"
+        app:layout_constraintEnd_toStartOf="@+id/kasrahain"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,26 +36,38 @@
         android:id="@+id/kasrahain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="@null"
         android:src="@drawable/button_kasrahain"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/fattahain"
+        app:layout_constraintBottom_toBottomOf="@+id/fattahain"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/fattahain"
-        app:layout_constraintTop_toBottomOf="@+id/fattahain" />
+        app:layout_constraintStart_toEndOf="@+id/fattahain"
+        app:layout_constraintTop_toTopOf="@+id/fattahain" />
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/dammahain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@null"
         android:src="@drawable/button_dammahain"
-        app:layout_constraintBottom_toBottomOf="@+id/fattahain"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kasrahain"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fattahain"
-        app:layout_constraintTop_toTopOf="@+id/fattahain"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/fattahain"
+        app:layout_constraintTop_toBottomOf="@+id/fattahain" />
+
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

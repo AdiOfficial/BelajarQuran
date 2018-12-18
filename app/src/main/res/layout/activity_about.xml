@@ -22,12 +22,12 @@
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="97dp"
         android:layout_height="100dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="44dp"
         android:background="@null"
         android:src="@drawable/org"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nama_text"
@@ -202,5 +202,15 @@
         app:constraint_referenced_ids="nama_text,email_text,fakultas_text,alamat_text,jurusan_text,no_bp_text,jenjang_text,perguruang_tinggi_text"
         />
 
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -7,17 +7,17 @@
     tools:context=".HijaiyahActivity">
 
     <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_background_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    android:id="@+id/appCompatImageView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/main_background_image"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/fattah"
@@ -25,8 +25,8 @@
         android:layout_height="wrap_content"
         android:background="@null"
         android:src="@drawable/button_fattah"
-        app:layout_constraintBottom_toTopOf="@+id/kasrah"
-        app:layout_constraintEnd_toStartOf="@+id/dammah"
+        app:layout_constraintBottom_toTopOf="@+id/dammah"
+        app:layout_constraintEnd_toStartOf="@+id/kasrah"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,26 +36,36 @@
         android:id="@+id/kasrah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="@null"
         android:src="@drawable/button_kasrah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/fattah"
+        app:layout_constraintBottom_toBottomOf="@+id/fattah"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/fattah"
-        app:layout_constraintTop_toBottomOf="@+id/fattah" />
+        app:layout_constraintStart_toEndOf="@+id/fattah"
+        app:layout_constraintTop_toTopOf="@+id/fattah" />
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/dammah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@null"
         android:src="@drawable/button_dammah"
-        app:layout_constraintBottom_toBottomOf="@+id/fattah"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fattah"
-        app:layout_constraintTop_toTopOf="@+id/fattah"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kasrah"
+        app:layout_constraintStart_toStartOf="@+id/fattah"
+        app:layout_constraintTop_toBottomOf="@+id/fattah" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
