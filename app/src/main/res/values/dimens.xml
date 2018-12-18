@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="welcome_icon_portrait">200dp</dimen>
+    <dimen name="welcome_icon_landscape">100dp</dimen>
+    <dimen name="main_button_size">170dp</dimen>
+    <dimen name="quizTextSize">20sp</dimen>
+</resources>
