@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_background_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="97dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="44dp"
+        android:background="@null"
+        android:src="@drawable/org"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/nama_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Nama"
+        app:layout_constraintBottom_toTopOf="@+id/no_bp_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/no_bp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="No. BP"
+        app:layout_constraintBottom_toTopOf="@+id/email_text"
+        app:layout_constraintStart_toStartOf="@+id/nama_text"
+        app:layout_constraintTop_toBottomOf="@+id/nama_text" />
+
+    <TextView
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/jurusan_text"
+        app:layout_constraintStart_toStartOf="@+id/no_bp_text"
+        app:layout_constraintTop_toBottomOf="@+id/no_bp_text" />
+
+    <TextView
+        android:id="@+id/jurusan_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": Sistem Informasi"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/jurusan_text" />
+
+    <TextView
+        android:id="@+id/fakultas_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": Ilmu Komputer"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/fakultas_text" />
+
+    <TextView
+        android:id="@+id/jenjang_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": Sastra Satu"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/jenjang_text" />
+
+    <TextView
+        android:id="@+id/perguruan_tinggi_value"
+        android:layout_width="155dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:text=": Universitas Putra"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/perguruang_tinggi_text" />
+
+    <TextView
+        android:id="@+id/alamat_value"
+        android:layout_width="155dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:text=": Kamang Magek, Agam"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/alamat_text" />
+
+    <TextView
+        android:id="@+id/perguruan_tinggi_value2"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:text='Indonesia "YPTK" Padang'
+        app:layout_constraintStart_toStartOf="@+id/perguruan_tinggi_value"
+        app:layout_constraintTop_toBottomOf="@+id/perguruan_tinggi_value" />
+
+    <TextView
+        android:id="@+id/jurusan_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Jurusan"
+        app:layout_constraintBottom_toTopOf="@+id/fakultas_text"
+        app:layout_constraintStart_toStartOf="@+id/email_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+    <TextView
+        android:id="@+id/fakultas_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Fakultas"
+        app:layout_constraintBottom_toTopOf="@+id/jenjang_text"
+        app:layout_constraintStart_toStartOf="@+id/jurusan_text"
+        app:layout_constraintTop_toBottomOf="@+id/jurusan_text" />
+
+    <TextView
+        android:id="@+id/jenjang_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Jenjang"
+        app:layout_constraintBottom_toTopOf="@+id/perguruang_tinggi_text"
+        app:layout_constraintStart_toStartOf="@+id/fakultas_text"
+        app:layout_constraintTop_toBottomOf="@+id/fakultas_text" />
+
+    <TextView
+        android:id="@+id/perguruang_tinggi_text"
+        android:layout_width="69dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:text="Perguruan Tinggi"
+        app:layout_constraintBottom_toTopOf="@+id/alamat_text"
+        app:layout_constraintStart_toStartOf="@+id/jenjang_text"
+        app:layout_constraintTop_toBottomOf="@+id/jenjang_text" />
+
+    <TextView
+        android:id="@+id/alamat_text"
+        android:layout_width="69dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:text="Alamat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/perguruang_tinggi_text"
+        app:layout_constraintTop_toBottomOf="@+id/perguruang_tinggi_text" />
+
+    <TextView
+        android:id="@+id/nama_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": Arby Wahyuzi"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/nama_text" />
+
+    <TextView
+        android:id="@+id/no_bp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": 14101152610262"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/no_bp_text" />
+
+    <TextView
+        android:id="@+id/no_bp_value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text=": arbywahyu50@gmail.com"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/email_text" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="nama_text,email_text,fakultas_text,alamat_text,jurusan_text,no_bp_text,jenjang_text,perguruang_tinggi_text"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

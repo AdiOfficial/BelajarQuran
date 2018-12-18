@@ -103,7 +103,6 @@ public class QuizFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_quiz,container,false);
         final Quiz question = getArguments().getParcelable(TAG);
         AppCompatImageView quizImage = v.findViewById(R.id.quiz_image);
-//        quizImage.setImageResource(resource_id);
         quizImage.setImageDrawable(getQuestionImageDrawable(question.getJawaban()));
         final AppCompatButton optionA = v.findViewById(R.id.jawaban_a);
         AppCompatButton optionB = v.findViewById(R.id.jawaban_b);

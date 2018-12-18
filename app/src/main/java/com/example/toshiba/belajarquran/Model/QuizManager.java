@@ -1,15 +1,20 @@
 package com.example.toshiba.belajarquran.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
 public class QuizManager  {
 
     private static int TOTAL_QUESTIONS = 10;
-    private static Iterator<Quiz> questionsIterator;
+    private Iterator<Quiz> iterator;
 
     public QuizManager(){
         Abjad[] abjads = initializeQuestions();
@@ -17,11 +22,11 @@ public class QuizManager  {
         for(Abjad abj : abjads){
             questions.add(new Quiz(initializeOptionsFor(abj),abj));
         }
-        questionsIterator = questions.iterator();
+        this.iterator = questions.iterator();
     }
 
     public Iterator<Quiz> iterator(){
-        return questionsIterator;
+        return iterator;
     }
 
     private Abjad[] initializeQuestions(){
@@ -65,7 +70,7 @@ public class QuizManager  {
         }
 
         Random rand = new Random();
-        int randomNum = rand.nextInt(3);
+        int randomNum = rand.nextInt(4);
         result[0] = result[randomNum];
         result[randomNum] = abj;
         return result;

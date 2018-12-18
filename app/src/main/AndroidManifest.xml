@@ -23,10 +23,13 @@
         <activity android:name=".DammahActivity" />
         <activity android:name=".FattahActivity" />
         <activity android:name=".TanwinActivity" />
-        <activity android:name=".QuizActivity" />
+        <activity
+            android:name=".QuizActivity"
+            android:configChanges="orientation|screenSize" />
         <activity android:name=".KasrahainActivity" />
         <activity android:name=".FattahainActivity" />
-        <activity android:name=".DammahainActivity"></activity>
+        <activity android:name=".DammahainActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

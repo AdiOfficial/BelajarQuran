@@ -24,14 +24,16 @@ public class QuizActivity extends AppCompatActivity implements AnswerListener {
         if(task.isRightAnswer()){
             rightCount++;
         }
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if(quizManager.iterator().hasNext()){
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             QuizFragment fragment = QuizFragment.newInstance(quizManager.iterator().next(),this);
-            fragmentTransaction.add(R.id.quiz_fragment_container,fragment);
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.quiz_fragment_container,fragment);
         }else{
-            Toast.makeText(this,String.valueOf(rightCount),Toast.LENGTH_LONG);
+            ScoreFragment fragment = ScoreFragment.newInstance(rightCount);
+            fragmentTransaction.replace(R.id.quiz_fragment_container,fragment);
+            Toast.makeText(this,String.valueOf(rightCount),Toast.LENGTH_LONG).show();
         }
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -40,10 +42,12 @@ public class QuizActivity extends AppCompatActivity implements AnswerListener {
         setContentView(R.layout.activity_quiz);
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        quizManager = new QuizManager();
-        Quiz question = quizManager.iterator().next();
-        QuizFragment fragment = QuizFragment.newInstance(question,this);
-        fragmentTransaction.add(R.id.quiz_fragment_container,fragment)
-                .commit();
+        if(quizManager == null){
+            quizManager = new QuizManager();
+            Quiz question = quizManager.iterator().next();
+            QuizFragment fragment = QuizFragment.newInstance(question,this);
+            fragmentTransaction.add(R.id.quiz_fragment_container,fragment)
+                    .commit();
+        }
     }
 }

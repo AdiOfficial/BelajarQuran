@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatImageButton harkatButton = findViewById(R.id.harkat);
         AppCompatImageButton tanwinButton = findViewById(R.id.tanwin);
         AppCompatImageButton quizButton = findViewById(R.id.quiz);
+        AppCompatImageButton aboutButton = findViewById(R.id.about);
 
         hijaiyahButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,QuizActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
                 startActivity(intent);
             }
         });
